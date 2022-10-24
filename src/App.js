@@ -5,6 +5,7 @@ import {useTelegram} from "./hooks/useTelegram";
 import {Route, Routes} from 'react-router-dom'
 import ProductList from "./components/ProductList/ProductList";
 import Form from "./components/Form/Form";
+import Test from "./components/Test";
 
 function App() {
     const {tg, onToggleButton} = useTelegram()
@@ -19,6 +20,7 @@ function App() {
             <Routes>
                 <Route index element={<ProductList/>}/>
                 <Route path={'form'} element={<Form/>}/>
+                <Route path={'test'} element={<Test/>}/>
             </Routes>
             {/*<button onClick={onToggleButton}>toggle</button>*/}
         </div>
